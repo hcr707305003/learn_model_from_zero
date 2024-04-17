@@ -19,7 +19,7 @@ data['gender'] = data['gender'].map({'M': 0, 'F': 1})
 min_age = data['age'].min()
 max_age = data['age'].max()
 
-# 数据归一化, 将年龄规范到0-1之间
+# 数据归一化（公式：年龄 - 最小年龄 / 最大年龄 - 最小年龄）, 将年龄规范到0-1之间
 data['age'] = (data['age'] - min_age) / (max_age - min_age)
 
 # 获取原来的数值
